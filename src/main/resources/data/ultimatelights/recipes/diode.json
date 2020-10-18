@@ -1,0 +1,24 @@
+{
+  "type": "crafting_shaped",
+  "group": "diode",
+  "pattern": [
+    " A ",
+    "ABA",
+    "ACA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:glass_pane"
+    },
+    "B": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "C": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "ultimatelights:diode",
+    "count": 8
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "itemGroup.ultimatelights": "Lichter",
+
+  "block.ultimatelights.light_block": "Lichtblock",
+  "block.ultimatelights.light_block_black": "Schwarzer Lichtblock",
+  "block.ultimatelights.light_block_white": "Weißer Lichtblock",
+  "block.ultimatelights.light_block_lime": "Hellgrüner Lichtblock",
+  "block.ultimatelights.light_block_green": "Grüner Lichtblock",
+  "block.ultimatelights.light_block_blue": "Blauer Lichtblock",
+  "block.ultimatelights.light_block_light_blue": "Hellblauer Lichtblock",
+  "block.ultimatelights.light_block_gray": "Grauer Lichtblock",
+  "block.ultimatelights.light_block_light_gray": "Hellgrauer Lichtblock",
+  "block.ultimatelights.light_block_red": "Roter Lichtblock",
+  "block.ultimatelights.light_block_orange": "Oranger Lichtblock",
+  "block.ultimatelights.light_block_yellow": "Gelber Lichtblock",
+  "block.ultimatelights.light_block_pink": "Pinker Lichtblock",
+  "block.ultimatelights.light_block_magenta": "Magenta Lichtblock",
+  "block.ultimatelights.light_block_purple": "Violetter Lichtblock",
+  "block.ultimatelights.light_block_brown": "Brauner Lichtblock",
+  "block.ultimatelights.light_block_cyan": "Türkiser Lichtblock",
+
+  "block.ultimatelights.light_panel": "Lichtpanel",
+
+  "item.ultimatelights.diode": "Diode"
+}

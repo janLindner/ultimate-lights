@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "face=floor": {
+      "model": "ultimatelights:block/light_panel"
+    },
+    "face=ceiling": {
+      "model": "ultimatelights:block/light_panel",
+      "x": 180
+    },
+    "face=wall,facing=south": {
+      "model": "ultimatelights:block/light_panel",
+      "x": 90,
+      "y": 180
+    },
+    "face=wall,facing=north": {
+      "model": "ultimatelights:block/light_panel",
+      "x": 90
+    },
+    "face=wall,facing=east": {
+      "model": "ultimatelights:block/light_panel",
+      "x": 90,
+      "y": 90
+    },
+    "face=wall,facing=west": {
+      "model": "ultimatelights:block/light_panel",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

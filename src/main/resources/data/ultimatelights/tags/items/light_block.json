@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "ultimatelights:light_block",
+    "ultimatelights:light_block_black",
+    "ultimatelights:light_block_white",
+    "ultimatelights:light_block_red",
+    "ultimatelights:light_block_orange",
+    "ultimatelights:light_block_yellow",
+    "ultimatelights:light_block_pink",
+    "ultimatelights:light_block_magenta",
+    "ultimatelights:light_block_purple",
+    "ultimatelights:light_block_lime",
+    "ultimatelights:light_block_green",
+    "ultimatelights:light_block_blue",
+    "ultimatelights:light_block_light_blue",
+    "ultimatelights:light_block_gray",
+    "ultimatelights:light_block_light_gray",
+    "ultimatelights:light_block_brown",
+    "ultimatelights:light_block_cyan"
+  ]
+}
