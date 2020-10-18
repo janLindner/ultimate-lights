@@ -5,19 +5,29 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFaceBlock;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.DyeColor;
+import net.minecraft.item.ItemStack;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.world.GameType;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 import org.jetbrains.annotations.NotNull;
+
+import static me.hsgminer.ultimatelights.init.BlockRegistration.LIGHT_PANELS;
 
 public class LightPanel extends HorizontalFaceBlock {
 
@@ -57,8 +67,6 @@ public class LightPanel extends HorizontalFaceBlock {
     );
     //</editor-fold>
 
-    private final DyeColor color;
-
     public LightPanel(@NotNull final DyeColor color) {
         super(
             AbstractBlock.Properties
@@ -69,7 +77,6 @@ public class LightPanel extends HorizontalFaceBlock {
 
         );
 
-        this.color = color;
         setDefaultState(getStateContainer().getBaseState()
             .with(NORTH, false)
             .with(SOUTH, false)
@@ -86,6 +93,7 @@ public class LightPanel extends HorizontalFaceBlock {
 
     @NotNull
     @Override
+    @SuppressWarnings("deprecation")
     public VoxelShape getShape(
         @NotNull final BlockState state,
         @NotNull final IBlockReader worldIn,
@@ -169,5 +177,46 @@ public class LightPanel extends HorizontalFaceBlock {
         } else {
             return false;
         }
+    }
+
+    @NotNull
+    @Override
+    @SuppressWarnings("deprecation")
+    public ActionResultType onBlockActivated(
+        @NotNull final BlockState state,
+        @NotNull final World world,
+        @NotNull final BlockPos pos,
+        @NotNull final PlayerEntity player,
+        @NotNull final Hand hand,
+        @NotNull final BlockRayTraceResult hit
+    ) {
+        final ItemStack heldItem = player.getHeldItem(hand);
+
+        final DyeColor color = DyeColor.getColor(heldItem);
+        if (world.isRemote()
+            || color == null
+            || state.getBlock().equals(LIGHT_PANELS.get(color).get())
+        ) {
+            return ActionResultType.PASS;
+        }
+
+        // place new color
+        final BlockState newState = LIGHT_PANELS.get(color).get().getDefaultState()
+            .with(FACE, state.get(FACE))
+            .with(HORIZONTAL_FACING, state.get(HORIZONTAL_FACING))
+            .with(UP, state.get(UP))
+            .with(DOWN, state.get(DOWN))
+            .with(EAST, state.get(EAST))
+            .with(WEST, state.get(WEST))
+            .with(NORTH, state.get(NORTH))
+            .with(SOUTH, state.get(SOUTH));
+        world.setBlockState(pos, newState);
+
+        // consume dye item
+        if (((ServerPlayerEntity) player).interactionManager.getGameType() != GameType.CREATIVE) {
+            heldItem.shrink(1);
+        }
+
+        return ActionResultType.SUCCESS;
     }
 }
