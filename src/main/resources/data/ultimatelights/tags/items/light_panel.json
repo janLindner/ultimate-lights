@@ -1,6 +1,22 @@
 {
   "replace": false,
   "values": [
-    "ultimatelights:light_panel"
+    "ultimatelights:light_panel",
+    "ultimatelights:light_panel_red",
+    "ultimatelights:light_panel_orange",
+    "ultimatelights:light_panel_yellow",
+    "ultimatelights:light_panel_black",
+    "ultimatelights:light_panel_white",
+    "ultimatelights:light_panel_purple",
+    "ultimatelights:light_panel_magenta",
+    "ultimatelights:light_panel_pink",
+    "ultimatelights:light_panel_lime",
+    "ultimatelights:light_panel_green",
+    "ultimatelights:light_panel_blue",
+    "ultimatelights:light_panel_light_blue",
+    "ultimatelights:light_panel_gray",
+    "ultimatelights:light_panel_light_gray",
+    "ultimatelights:light_panel_brown",
+    "ultimatelights:light_panel_cyan"
   ]
 }

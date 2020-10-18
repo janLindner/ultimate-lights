@@ -22,6 +22,7 @@ import java.util.function.Supplier;
 import static me.hsgminer.ultimatelights.UltimateLights.ITEM_GROUP;
 import static me.hsgminer.ultimatelights.UltimateLights.MOD_ID;
 
+@SuppressWarnings("unused")
 public class BlockRegistration {
 
     public static final Map<RegistryObject<Block>, Supplier<Block>> ENTRIES = new LinkedHashMap<>();
@@ -45,6 +46,22 @@ public class BlockRegistration {
     public static final RegistryObject<Block> LIGHT_BLOCK_CYAN = register("light_block_cyan", () -> new LightBlock(DyeColor.CYAN));
 
     public static final RegistryObject<Block> LIGHT_PANEL = register("light_panel", LightPanel::new);
+    public static final RegistryObject<Block> LIGHT_PANEL_WHITE = register("light_panel_white", () -> new LightPanel(DyeColor.WHITE));
+    public static final RegistryObject<Block> LIGHT_PANEL_BLACK = register("light_panel_black", () -> new LightPanel(DyeColor.BLACK));
+    public static final RegistryObject<Block> LIGHT_PANEL_GRAY = register("light_panel_gray", () -> new LightPanel(DyeColor.GRAY));
+    public static final RegistryObject<Block> LIGHT_PANEL_LIGHT_GRAY = register("light_panel_light_gray", () -> new LightPanel(DyeColor.LIGHT_GRAY));
+    public static final RegistryObject<Block> LIGHT_PANEL_BLUE = register("light_panel_blue", () -> new LightPanel(DyeColor.BLUE));
+    public static final RegistryObject<Block> LIGHT_PANEL_LIGHT_BLUE = register("light_panel_light_blue", () -> new LightPanel(DyeColor.LIGHT_BLUE));
+    public static final RegistryObject<Block> LIGHT_PANEL_RED = register("light_panel_red", () -> new LightPanel(DyeColor.RED));
+    public static final RegistryObject<Block> LIGHT_PANEL_ORANGE = register("light_panel_orange", () -> new LightPanel(DyeColor.ORANGE));
+    public static final RegistryObject<Block> LIGHT_PANEL_YELLOW = register("light_panel_yellow", () -> new LightPanel(DyeColor.YELLOW));
+    public static final RegistryObject<Block> LIGHT_PANEL_LIME = register("light_panel_lime", () -> new LightPanel(DyeColor.LIME));
+    public static final RegistryObject<Block> LIGHT_PANEL_GREEN = register("light_panel_green", () -> new LightPanel(DyeColor.GREEN));
+    public static final RegistryObject<Block> LIGHT_PANEL_PINK = register("light_panel_pink", () -> new LightPanel(DyeColor.PINK));
+    public static final RegistryObject<Block> LIGHT_PANEL_MAGENTA = register("light_panel_magenta", () -> new LightPanel(DyeColor.MAGENTA));
+    public static final RegistryObject<Block> LIGHT_PANEL_PURPLE = register("light_panel_purple", () -> new LightPanel(DyeColor.PURPLE));
+    public static final RegistryObject<Block> LIGHT_PANEL_BROWN = register("light_panel_brown", () -> new LightPanel(DyeColor.BROWN));
+    public static final RegistryObject<Block> LIGHT_PANEL_CYAN = register("light_panel_cyan", () -> new LightPanel(DyeColor.CYAN));
 
     @SubscribeEvent
     public void onRegisterBlocks(@NotNull RegistryEvent.Register<Block> event) {

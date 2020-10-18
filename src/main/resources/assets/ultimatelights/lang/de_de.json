@@ -1,5 +1,5 @@
 {
-  "itemGroup.ultimatelights": "Lichter",
+  "itemGroup.ultimatelights": "Ultimate Lights",
 
   "block.ultimatelights.light_block": "Lichtblock",
   "block.ultimatelights.light_block_black": "Schwarzer Lichtblock",
@@ -20,6 +20,22 @@
   "block.ultimatelights.light_block_cyan": "Türkiser Lichtblock",
 
   "block.ultimatelights.light_panel": "Lichtpanel",
+  "block.ultimatelights.light_panel_black": "Schwarzes Lichtpanel",
+  "block.ultimatelights.light_panel_white": "Weißes Lichtpanel",
+  "block.ultimatelights.light_panel_lime": "Hellgrünes Lichtpanel",
+  "block.ultimatelights.light_panel_green": "Grünes Lichtpanel",
+  "block.ultimatelights.light_panel_blue": "Blaues Lichtpanel",
+  "block.ultimatelights.light_panel_light_blue": "Hellblaues Lichtpanel",
+  "block.ultimatelights.light_panel_gray": "Graues Lichtpanel",
+  "block.ultimatelights.light_panel_light_gray": "Hellgraues Lichtpanel",
+  "block.ultimatelights.light_panel_red": "Rotes Lichtpanel",
+  "block.ultimatelights.light_panel_orange": "Oranges Lichtpanel",
+  "block.ultimatelights.light_panel_yellow": "Gelbes Lichtpanel",
+  "block.ultimatelights.light_panel_pink": "Pinkes Lichtpanel",
+  "block.ultimatelights.light_panel_magenta": "Magenta Lichtpanel",
+  "block.ultimatelights.light_panel_purple": "Violettes Lichtpanel",
+  "block.ultimatelights.light_panel_brown": "Braunes Lichtpanel",
+  "block.ultimatelights.light_panel_cyan": "Türkiser Lichtpanel",
 
   "item.ultimatelights.diode": "Diode"
 }

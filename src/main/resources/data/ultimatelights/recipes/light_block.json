@@ -1,6 +1,6 @@
 {
   "type": "crafting_shaped",
-  "group": "light_blocks",
+  "group": "light_block",
   "pattern": [
     "ABA",
     "BCB",

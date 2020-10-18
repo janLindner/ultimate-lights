@@ -1,0 +1,8 @@
+{
+	"parent": "ultimatelights:block/light_panel_connection",
+	"textures": {
+		"particle": "ultimatelights:block/colors/magenta",
+		"outline": "ultimatelights:block/colors/outline",
+		"light": "ultimatelights:block/colors/magenta"
+	}
+}

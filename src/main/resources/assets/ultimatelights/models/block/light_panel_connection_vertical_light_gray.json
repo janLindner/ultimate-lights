@@ -1,0 +1,8 @@
+{
+	"parent": "ultimatelights:block/light_panel_connection_vertical",
+	"textures": {
+		"particle": "ultimatelights:block/colors/light_gray",
+		"border": "ultimatelights:block/colors/outline",
+		"light": "ultimatelights:block/colors/light_gray"
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "ultimatelights:block/colors/outline",
+		"border": "ultimatelights:block/colors/outline"
+	},
+	"elements": [
+		{
+			"name": "base",
+			"from": [1, 0, 1],
+			"to": [15, 2, 2],
+			"rotation": {"angle": 0, "axis": "z", "origin": [6, 8, 10]},
+			"color": 7,
+			"faces": {
+				"north": {"uv": [16, 0, 0, 16], "texture": "#border"},
+				"east": {"uv": [16, 0, 0, 16], "texture": "#border"},
+				"south": {"uv": [16, 0, 0, 16], "texture": "#border"},
+				"west": {"uv": [16, 0, 0, 16], "texture": "#border"},
+				"up": {"uv": [16, 0, 0, 16], "texture": "#border"},
+				"down": {"uv": [16, 0, 0, 16], "texture": "#border"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 8, 0]
+		},
+		"ground": {
+			"translation": [0, -4.5, 0],
+			"scale": [-0.5, -0.5, -0.5]
+		},
+		"gui": {
+			"rotation": [25, 45, 0],
+			"translation": [-0.25, 1.5, 0],
+			"scale": [0.75, 0.75, 0.75]
+		}
+	}
+}

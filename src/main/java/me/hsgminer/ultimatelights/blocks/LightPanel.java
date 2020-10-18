@@ -6,18 +6,31 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFaceBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.DyeColor;
+import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorld;
 import net.minecraftforge.common.ToolType;
 import org.jetbrains.annotations.NotNull;
 
 public class LightPanel extends HorizontalFaceBlock {
 
+    //<editor-fold desc="properties">
+    private static final BooleanProperty UP = BooleanProperty.create("up");
+    private static final BooleanProperty DOWN = BooleanProperty.create("down");
+    private static final BooleanProperty NORTH = BooleanProperty.create("north");
+    private static final BooleanProperty SOUTH = BooleanProperty.create("south");
+    private static final BooleanProperty EAST = BooleanProperty.create("east");
+    private static final BooleanProperty WEST = BooleanProperty.create("west");
+    //</editor-fold>
+
+    //<editor-fold desc="shapes">
     private static final VoxelShape SHAPE_UP = VoxelShapes.or(
         makeCuboidShape(1, 0, 1, 15, 2, 15),
         makeCuboidShape(2, 2, 2, 14, 3, 14)
@@ -42,7 +55,7 @@ public class LightPanel extends HorizontalFaceBlock {
         makeCuboidShape(14,1,1,16,15,15),
         makeCuboidShape(13,2,2,14,14,14)
     );
-
+    //</editor-fold>
 
     private final DyeColor color;
 
@@ -57,6 +70,14 @@ public class LightPanel extends HorizontalFaceBlock {
         );
 
         this.color = color;
+        setDefaultState(getStateContainer().getBaseState()
+            .with(NORTH, false)
+            .with(SOUTH, false)
+            .with(EAST, false)
+            .with(WEST, false)
+            .with(UP, false)
+            .with(DOWN, false)
+        );
     }
 
     public LightPanel() {
@@ -102,6 +123,51 @@ public class LightPanel extends HorizontalFaceBlock {
 
     @Override
     protected void fillStateContainer(@NotNull final StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(BlockStateProperties.FACE, BlockStateProperties.HORIZONTAL_FACING);
+        builder.add(
+            BlockStateProperties.FACE, BlockStateProperties.HORIZONTAL_FACING,
+            UP, DOWN, EAST, WEST, NORTH, SOUTH
+        );
+    }
+
+    @NotNull
+    @Override
+    public BlockState updatePostPlacement(
+        @NotNull final BlockState state,
+        @NotNull final Direction facing,
+        @NotNull final BlockState facingState,
+        @NotNull final IWorld world,
+        @NotNull final BlockPos currentPos,
+        @NotNull final BlockPos facingPos
+    ) {
+        final boolean up = canConnectToPanel(state, world, currentPos, Direction.UP);
+        final boolean down = canConnectToPanel(state, world, currentPos, Direction.DOWN);
+        final boolean north = canConnectToPanel(state, world, currentPos, Direction.NORTH);
+        final boolean south = canConnectToPanel(state, world, currentPos, Direction.SOUTH);
+        final boolean east = canConnectToPanel(state, world, currentPos, Direction.EAST);
+        final boolean west = canConnectToPanel(state, world, currentPos, Direction.WEST);
+
+        return state
+            .with(UP, up)
+            .with(DOWN, down)
+            .with(NORTH, north)
+            .with(SOUTH, south)
+            .with(EAST, east)
+            .with(WEST, west);
+    }
+
+    private boolean canConnectToPanel(
+        @NotNull final BlockState state,
+        @NotNull final IWorld world,
+        @NotNull final BlockPos pos,
+        @NotNull final Direction direction
+    ) {
+        final BlockPos offsetPos = pos.offset(direction);
+        final BlockState offsetState = world.getBlockState(offsetPos);
+
+        if (offsetState.getBlock() == this) {
+            return state.get(FACE) == offsetState.get(FACE);
+        } else {
+            return false;
+        }
     }
 }

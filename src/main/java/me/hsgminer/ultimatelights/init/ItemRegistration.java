@@ -22,7 +22,6 @@ public class ItemRegistration {
 
     private static final Map<RegistryObject<Item>, Supplier<Item>> ENTRIES = new LinkedHashMap<>();
 
-
     @SubscribeEvent
     public void onRegisterItems(final RegistryEvent.Register<Item> event) {
         final IForgeRegistry<Item> registry = event.getRegistry();

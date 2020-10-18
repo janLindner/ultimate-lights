@@ -1,0 +1,221 @@
+{
+  "multipart": [
+    {
+      "when": {"face": "floor"},
+      "apply": {"model": "ultimatelights:block/light_panel_center_red"}
+    },
+    {
+      "when": {"face": "floor", "north": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_red"}
+    },
+    {
+      "when": {"face": "floor", "north": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border"}
+    },
+    {
+      "when": {"face": "floor", "south": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_red", "y": 180}
+    },
+    {
+      "when": {"face": "floor", "south": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border", "y": 180}
+    },
+    {
+      "when": {"face": "floor", "east": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_red", "y": 90}
+    },
+    {
+      "when": {"face": "floor", "east": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border", "y": 90}
+    },
+    {
+      "when": {"face": "floor", "west": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_red", "y": 270}
+    },
+    {
+      "when": {"face": "floor", "west": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border", "y": 270}
+    },
+
+
+    {
+      "when": {"face": "ceiling"},
+      "apply": {"model": "ultimatelights:block/light_panel_center_red", "x": 180}
+    },
+    {
+      "when": {"face": "ceiling", "north": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_red", "x": 180, "y": 180}
+    },
+    {
+      "when": {"face": "ceiling", "north": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border", "x": 180, "y": 180}
+    },
+    {
+      "when": {"face": "ceiling", "south": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_red", "x": 180}
+    },
+    {
+      "when": {"face": "ceiling", "south": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border", "x": 180}
+    },
+    {
+      "when": {"face": "ceiling", "east": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_red", "x": 180, "y": 270}
+    },
+    {
+      "when": {"face": "ceiling", "east": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border", "x": 180, "y": 270}
+    },
+    {
+      "when": {"face": "ceiling", "west": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_red", "x": 180, "y": 90}
+    },
+    {
+      "when": {"face": "ceiling", "west": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border", "x": 180, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "south"},
+      "apply": {"model": "ultimatelights:block/light_panel_center_red", "x": 90, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "south", "up": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 270, "y": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "south", "up": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 270, "y": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "south", "down": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 90, "y": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "south", "down": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 90, "y": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "south", "east": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 180, "y": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "south", "east": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 180, "y": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "south", "west": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 0, "y": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "south", "west": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 0, "y": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "north"},
+      "apply": {"model": "ultimatelights:block/light_panel_center_red", "x": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "north", "up": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 270, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "north", "up": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 270, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "north", "down": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 90, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "north", "down": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 90, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "north", "east": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 0, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "north", "east": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 0, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "north", "west": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 180, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "north", "west": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 180, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "east"},
+      "apply": {"model": "ultimatelights:block/light_panel_center_red", "x": 90, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "east", "up": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 270, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "east", "up": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 270, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "east", "down": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 90, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "east", "down": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 90, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "east", "south": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 0, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "east", "south": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 0, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "east", "north": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 180, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "east", "north": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 180, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "west"},
+      "apply": {"model": "ultimatelights:block/light_panel_center_red", "x": 90, "y": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "west", "up": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 270, "y": 0}
+    },
+    {
+      "when": {"face": "wall", "facing": "west", "up": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 270, "y": 0}
+    },
+    {
+      "when": {"face": "wall", "facing": "west", "down": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 90, "y": 0}
+    },
+    {
+      "when": {"face": "wall", "facing": "west", "down": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 90, "y": 0}
+    },
+    {
+      "when": {"face": "wall", "facing": "west", "north": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 0, "y": 0}
+    },
+    {
+      "when": {"face": "wall", "facing": "west", "north": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 0, "y": 0}
+    },
+    {
+      "when": {"face": "wall", "facing": "west", "south": true},
+      "apply": {"model": "ultimatelights:block/light_panel_connection_vertical_red", "x": 180, "y": 0}
+    },
+    {
+      "when": {"face": "wall", "facing": "west", "south": false},
+      "apply": {"model": "ultimatelights:block/light_panel_border_vertical", "x": 180, "y": 0}
+    }  ]
+}

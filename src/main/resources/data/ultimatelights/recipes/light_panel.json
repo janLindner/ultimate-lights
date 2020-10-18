@@ -1,6 +1,6 @@
 {
   "type": "crafting_shaped",
-  "group": "light_panels",
+  "group": "light_panel",
   "pattern": [
     "AAA",
     "BCB"

@@ -1,0 +1,7 @@
+{
+	"parent": "ultimatelights:item/light_panel",
+	"textures": {
+		"particle": "ultimatelights:block/colors/brown",
+		"light": "ultimatelights:block/colors/brown"
+	}
+}
