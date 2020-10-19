@@ -14,7 +14,7 @@ apply plugin: 'maven-publish'
 
 version = '0.1'
 group = 'me.hsgminer.ultimatelights'
-archivesBaseName = 'ultimatelights'
+archivesBaseName = 'ultimatelights-1.16.3'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
