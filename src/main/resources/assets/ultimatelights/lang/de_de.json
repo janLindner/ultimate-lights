@@ -37,5 +37,8 @@
   "block.ultimatelights.light_panel_brown": "Braunes Lichtpanel",
   "block.ultimatelights.light_panel_cyan": "Türkiser Lichtpanel",
 
-  "item.ultimatelights.diode": "Diode"
+  "item.ultimatelights.diode": "Diode",
+
+  "ultimatelights.subtitle.light.activate": "Licht angeschaltet",
+  "ultimatelights.subtitle.light.deactivate": "Licht ausgeschaltet"
 }

@@ -38,8 +38,8 @@ public class BlockRegistration {
     public void onRegisterBlocks(@NotNull RegistryEvent.Register<Block> event) {
         final IForgeRegistry<Block> registry = event.getRegistry();
 
-        registerEachColor("light_block_", (name, color) -> LIGHT_BLOCKS.put(color, register(name, () -> new LightBlock(color))));
-        registerEachColor("light_panel_", (name, color) -> LIGHT_PANELS.put(color, register(name, () -> new LightPanel(color))));
+        forEachColor("light_block_", (name, color) -> LIGHT_BLOCKS.put(color, register(name, () -> new LightBlock(color))));
+        forEachColor("light_panel_", (name, color) -> LIGHT_PANELS.put(color, register(name, () -> new LightPanel(color))));
 
         ENTRIES.forEach((object, block) -> {
             registry.register(block.get());
@@ -71,7 +71,7 @@ public class BlockRegistration {
         return registryObject;
     }
 
-    private static void registerEachColor(final String name, BiConsumer<String, DyeColor> function) {
+    private static void forEachColor(final String name, BiConsumer<String, DyeColor> function) {
         for (final DyeColor color : DyeColor.values()) {
             final String objectName = name + color.name().toLowerCase();
             function.accept(objectName, color);

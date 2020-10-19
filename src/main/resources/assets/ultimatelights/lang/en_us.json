@@ -37,5 +37,8 @@
   "block.ultimatelights.light_panel_brown": "Brown Light Panel",
   "block.ultimatelights.light_panel_cyan": "Cyan Light Panel",
 
-  "item.ultimatelights.diode": "Diode"
+  "item.ultimatelights.diode": "Diode",
+
+  "ultimatelights.subtitle.light.activate": "Switch Light on",
+  "ultimatelights.subtitle.light.deactivate": "Switch Light off"
 }

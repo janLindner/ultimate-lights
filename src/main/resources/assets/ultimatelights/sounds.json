@@ -1,0 +1,10 @@
+{
+  "block.light.activate": {
+    "subtitle": "ultimatelights.subtitle.light.activate",
+    "sounds": ["ultimatelights:block/click"]
+  },
+  "block.light.deactivate": {
+    "subtitle": "ultimatelights.subtitle.light.deactivate",
+    "sounds": ["ultimatelights:block/click"]
+  }
+}

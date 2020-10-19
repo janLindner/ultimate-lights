@@ -15,6 +15,8 @@ import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
@@ -28,6 +30,8 @@ import net.minecraftforge.common.ToolType;
 import org.jetbrains.annotations.NotNull;
 
 import static me.hsgminer.ultimatelights.init.BlockRegistration.LIGHT_PANELS;
+import static me.hsgminer.ultimatelights.init.SoundRegistration.SWITCH_LIGHT_OFF;
+import static me.hsgminer.ultimatelights.init.SoundRegistration.SWITCH_LIGHT_ON;
 
 public class LightPanel extends HorizontalFaceBlock {
 
@@ -38,6 +42,7 @@ public class LightPanel extends HorizontalFaceBlock {
     private static final BooleanProperty SOUTH = BooleanProperty.create("south");
     private static final BooleanProperty EAST = BooleanProperty.create("east");
     private static final BooleanProperty WEST = BooleanProperty.create("west");
+    private static final BooleanProperty ACTIVE = BooleanProperty.create("active");
     //</editor-fold>
 
     //<editor-fold desc="shapes">
@@ -46,8 +51,8 @@ public class LightPanel extends HorizontalFaceBlock {
         makeCuboidShape(2, 2, 2, 14, 3, 14)
     );
     private static final VoxelShape SHAPE_DOWN = VoxelShapes.or(
-      makeCuboidShape(1, 16, 1, 15, 14, 15),
-      makeCuboidShape(2, 14, 2, 14, 13, 14)
+        makeCuboidShape(1, 16, 1, 15, 14, 15),
+        makeCuboidShape(2, 14, 2, 14, 13, 14)
     );
     private static final VoxelShape SHAPE_SOUTH = VoxelShapes.or(
         makeCuboidShape(1, 1, 0, 15, 15, 2),
@@ -62,8 +67,8 @@ public class LightPanel extends HorizontalFaceBlock {
         makeCuboidShape(2, 2, 2, 3, 14, 14)
     );
     private static final VoxelShape SHAPE_WEST = VoxelShapes.or(
-        makeCuboidShape(14,1,1,16,15,15),
-        makeCuboidShape(13,2,2,14,14,14)
+        makeCuboidShape(14, 1, 1, 16, 15, 15),
+        makeCuboidShape(13, 2, 2, 14, 14, 14)
     );
     //</editor-fold>
 
@@ -77,13 +82,16 @@ public class LightPanel extends HorizontalFaceBlock {
 
         );
 
-        setDefaultState(getStateContainer().getBaseState()
-            .with(NORTH, false)
-            .with(SOUTH, false)
-            .with(EAST, false)
-            .with(WEST, false)
-            .with(UP, false)
-            .with(DOWN, false)
+        setDefaultState(
+            getStateContainer()
+                .getBaseState()
+                .with(NORTH, false)
+                .with(SOUTH, false)
+                .with(EAST, false)
+                .with(WEST, false)
+                .with(UP, false)
+                .with(DOWN, false)
+                .with(ACTIVE, true)
         );
     }
 
@@ -126,14 +134,14 @@ public class LightPanel extends HorizontalFaceBlock {
 
     @Override
     public int getLightValue(final BlockState state, final IBlockReader world, final BlockPos pos) {
-        return 15;
+        return state.get(ACTIVE) ? 15 : 0;
     }
 
     @Override
     protected void fillStateContainer(@NotNull final StateContainer.Builder<Block, BlockState> builder) {
         builder.add(
             BlockStateProperties.FACE, BlockStateProperties.HORIZONTAL_FACING,
-            UP, DOWN, EAST, WEST, NORTH, SOUTH
+            UP, DOWN, EAST, WEST, NORTH, SOUTH, ACTIVE
         );
     }
 
@@ -190,13 +198,23 @@ public class LightPanel extends HorizontalFaceBlock {
         @NotNull final Hand hand,
         @NotNull final BlockRayTraceResult hit
     ) {
+        if (world.isRemote()) return ActionResultType.PASS;
         final ItemStack heldItem = player.getHeldItem(hand);
 
         final DyeColor color = DyeColor.getColor(heldItem);
-        if (world.isRemote()
-            || color == null
-            || state.getBlock().equals(LIGHT_PANELS.get(color).get())
-        ) {
+        if (color == null || state.getBlock().equals(LIGHT_PANELS.get(color).get())) {
+            if (hand == Hand.MAIN_HAND) {
+                final Boolean wasActive = state.get(ACTIVE);
+
+                final BlockState newState = state.with(ACTIVE, !wasActive);
+                world.setBlockState(pos, newState);
+
+                final SoundEvent switchSound = wasActive ? SWITCH_LIGHT_OFF : SWITCH_LIGHT_ON;
+                world.playSound(null, pos, switchSound, SoundCategory.BLOCKS, 1F, 1F);
+
+                return ActionResultType.SUCCESS;
+            }
+
             return ActionResultType.PASS;
         }
 
