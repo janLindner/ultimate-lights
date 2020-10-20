@@ -134,7 +134,7 @@ public class LightPanel extends HorizontalFaceBlock {
 
     @Override
     public int getLightValue(final BlockState state, final IBlockReader world, final BlockPos pos) {
-        return state.get(ACTIVE) ? 15 : 0;
+        return state.get(ACTIVE) ? 15 : super.getLightValue(state, world, pos);
     }
 
     @Override

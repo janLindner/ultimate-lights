@@ -15,7 +15,7 @@ public class UltimateLights {
 
     public static final String MOD_ID = "ultimatelights";
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public static ItemGroup ITEM_GROUP = new LightsItemGroup();
 
