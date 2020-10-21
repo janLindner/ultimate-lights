@@ -6,6 +6,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import org.jetbrains.annotations.NotNull;
@@ -16,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
 
+@Mod.EventBusSubscriber(modid = UltimateLights.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ItemRegistration {
 
     public static final List<Supplier<Item>> BLOCK_ITEMS = new ArrayList<>();
@@ -23,7 +25,7 @@ public class ItemRegistration {
     private static final Map<RegistryObject<Item>, Supplier<Item>> ENTRIES = new LinkedHashMap<>();
 
     @SubscribeEvent
-    public void onRegisterItems(final RegistryEvent.Register<Item> event) {
+    public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         final IForgeRegistry<Item> registry = event.getRegistry();
 
         // register block items

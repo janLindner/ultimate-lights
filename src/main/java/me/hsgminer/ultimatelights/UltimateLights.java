@@ -1,8 +1,5 @@
 package me.hsgminer.ultimatelights;
 
-import me.hsgminer.ultimatelights.init.BlockRegistration;
-import me.hsgminer.ultimatelights.init.ItemRegistration;
-import me.hsgminer.ultimatelights.init.SoundRegistration;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -23,7 +20,5 @@ public class UltimateLights {
         final IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         bus.register(this);
-        bus.register(new BlockRegistration());
-        bus.register(new ItemRegistration());
     }
 }

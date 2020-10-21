@@ -1,5 +1,6 @@
 package me.hsgminer.ultimatelights.init;
 
+import me.hsgminer.ultimatelights.UltimateLights;
 import me.hsgminer.ultimatelights.blocks.LightBlock;
 import me.hsgminer.ultimatelights.blocks.LightPanel;
 import me.hsgminer.ultimatelights.blocks.LightTube;
@@ -11,6 +12,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import org.jetbrains.annotations.NotNull;
@@ -25,6 +27,7 @@ import static me.hsgminer.ultimatelights.UltimateLights.ITEM_GROUP;
 import static me.hsgminer.ultimatelights.UltimateLights.MOD_ID;
 
 @SuppressWarnings("unused")
+@Mod.EventBusSubscriber(modid = UltimateLights.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class BlockRegistration {
 
     public static final Map<RegistryObject<Block>, Supplier<Block>> ENTRIES = new LinkedHashMap<>();
@@ -39,7 +42,7 @@ public class BlockRegistration {
     public static final Map<DyeColor, RegistryObject<Block>> LIGHT_TUBES = new LinkedHashMap<>();
 
     @SubscribeEvent
-    public void onRegisterBlocks(@NotNull RegistryEvent.Register<Block> event) {
+    public static void onRegisterBlocks(@NotNull RegistryEvent.Register<Block> event) {
         final IForgeRegistry<Block> registry = event.getRegistry();
 
         forEachColor("light_block_", (name, color) -> LIGHT_BLOCKS.put(color, register(name, () -> new LightBlock(color))));
