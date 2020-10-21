@@ -1,0 +1,7 @@
+{
+	"parent": "ultimatelights:block/light_tube_half",
+	"textures": {
+		"particle": "ultimatelights:block/colors/gray",
+		"light": "ultimatelights:block/colors/gray"
+	}
+}

@@ -2,6 +2,7 @@ package me.hsgminer.ultimatelights.init;
 
 import me.hsgminer.ultimatelights.blocks.LightBlock;
 import me.hsgminer.ultimatelights.blocks.LightPanel;
+import me.hsgminer.ultimatelights.blocks.LightTube;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.DyeColor;
@@ -34,12 +35,16 @@ public class BlockRegistration {
     public static final RegistryObject<Block> LIGHT_PANEL = register("light_panel", LightPanel::new);
     public static final Map<DyeColor, RegistryObject<Block>> LIGHT_PANELS = new LinkedHashMap<>();
 
+    public static final RegistryObject<Block> LIGHT_TUBE = register("light_tube", LightTube::new);
+    public static final Map<DyeColor, RegistryObject<Block>> LIGHT_TUBES = new LinkedHashMap<>();
+
     @SubscribeEvent
     public void onRegisterBlocks(@NotNull RegistryEvent.Register<Block> event) {
         final IForgeRegistry<Block> registry = event.getRegistry();
 
         forEachColor("light_block_", (name, color) -> LIGHT_BLOCKS.put(color, register(name, () -> new LightBlock(color))));
         forEachColor("light_panel_", (name, color) -> LIGHT_PANELS.put(color, register(name, () -> new LightPanel(color))));
+        forEachColor("light_tube_", (name, color) -> LIGHT_TUBES.put(color, register(name, () -> new LightPanel(color))));
 
         ENTRIES.forEach((object, block) -> {
             registry.register(block.get());
