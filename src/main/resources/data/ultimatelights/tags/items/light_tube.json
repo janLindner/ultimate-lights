@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "ultimatelights:light_tube",
+    "ultimatelights:light_tube_red",
+    "ultimatelights:light_tube_yellow",
+    "ultimatelights:light_tube_orange",
+    "ultimatelights:light_tube_blue",
+    "ultimatelights:light_tube_light_blue",
+    "ultimatelights:light_tube_gray",
+    "ultimatelights:light_tube_light_gray",
+    "ultimatelights:light_tube_black",
+    "ultimatelights:light_tube_white",
+    "ultimatelights:light_tube_green",
+    "ultimatelights:light_tube_lime",
+    "ultimatelights:light_tube_pink",
+    "ultimatelights:light_tube_magenta",
+    "ultimatelights:light_tube_purple",
+    "ultimatelights:light_tube_cyan",
+    "ultimatelights:light_tube_brown"
+  ]
+}

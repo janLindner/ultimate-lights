@@ -1,0 +1,180 @@
+{
+  "multipart": [
+    {
+      "when": {"OR": [
+        {"face": "floor", "facing": "north", "east": false, "west": false, "north": false, "south": false},
+        {"face": "floor", "facing": "south", "east": false, "west": false, "north": false, "south": false}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_single_blue"}
+    },
+    {
+      "when": {"OR": [
+        {"face": "floor", "facing": "north", "east": true, "west": false, "north": false, "south": false},
+        {"face": "floor", "facing": "south", "east": true, "west": false, "north": false, "south": false}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue"}
+    },
+    {
+      "when": {"OR": [
+        {"face": "floor", "facing": "north", "east": false, "west": true, "north": false, "south": false},
+        {"face": "floor", "facing": "south", "east": false, "west": true, "north": false, "south": false}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "y": 180}
+    },
+    {
+      "when": {"OR": [
+        {"face": "floor", "facing": "north", "east": true, "west": true, "north": false, "south": false},
+        {"face": "floor", "facing": "south", "east": true, "west": true, "north": false, "south": false}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_full_blue"}
+    },
+    {
+      "when": {"OR": [
+        {"face": "floor", "facing": "east", "east": false, "west": false, "north": false, "south": false},
+        {"face": "floor", "facing": "west", "east": false, "west": false, "north": false, "south": false}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_single_blue", "y": 90}
+    },
+    {
+      "when": {"OR": [
+        {"face": "floor", "facing": "east", "east": false, "west": false, "north": true, "south": false},
+        {"face": "floor", "facing": "west", "east": false, "west": false, "north": true, "south": false}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "y": 270}
+    },
+    {
+      "when": {"OR": [
+        {"face": "floor", "facing": "east", "east": false, "west": false, "north": false, "south": true},
+        {"face": "floor", "facing": "west", "east": false, "west": false, "north": false, "south": true}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "y": 90}
+    },
+    {
+      "when": {"OR": [
+        {"face": "floor", "facing": "east", "east": false, "west": false, "north": true, "south": true},
+        {"face": "floor", "facing": "west", "east": false, "west": false, "north": true, "south": true}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_full_blue", "y": 90}
+    },
+    {
+      "when": {"OR": [
+        {"face": "ceiling", "facing": "north", "east": false, "west": false, "north": false, "south": false},
+        {"face": "ceiling", "facing": "south", "east": false, "west": false, "north": false, "south": false}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_single_blue", "x": 180}
+    },
+    {
+      "when": {"OR": [
+        {"face": "ceiling", "facing": "north", "east": true, "west": false, "north": false, "south": false},
+        {"face": "ceiling", "facing": "south", "east": true, "west": false, "north": false, "south": false}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "x": 180}
+    },
+    {
+      "when": {"OR": [
+        {"face": "ceiling", "facing": "north", "east": false, "west": true, "north": false, "south": false},
+        {"face": "ceiling", "facing": "south", "east": false, "west": true, "north": false, "south": false}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "x": 180, "y": 180}
+    },
+    {
+      "when": {"OR": [
+        {"face": "ceiling", "facing": "north", "east": true, "west": true, "north": false, "south": false},
+        {"face": "ceiling", "facing": "south", "east": true, "west": true, "north": false, "south": false}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_full_blue", "x": 180}
+    },
+    {
+      "when": {"OR": [
+        {"face": "ceiling", "facing": "east", "east": false, "west": false, "north": false, "south": false},
+        {"face": "ceiling", "facing": "west", "east": false, "west": false, "north": false, "south": false}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_single_blue", "x": 180, "y": 90}
+    },
+    {
+      "when": {"OR": [
+        {"face": "ceiling", "facing": "east", "east": false, "west": false, "north": true, "south": false},
+        {"face": "ceiling", "facing": "west", "east": false, "west": false, "north": true, "south": false}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "x": 180, "y": 270}
+    },
+    {
+      "when": {"OR": [
+        {"face": "ceiling", "facing": "east", "east": false, "west": false, "north": false, "south": true},
+        {"face": "ceiling", "facing": "west", "east": false, "west": false, "north": false, "south": true}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "x": 180, "y": 90}
+    },
+    {
+      "when": {"OR": [
+        {"face": "ceiling", "facing": "east", "east": false, "west": false, "north": true, "south": true},
+        {"face": "ceiling", "facing": "west", "east": false, "west": false, "north": true, "south": true}
+      ]},
+      "apply": {"model": "ultimatelights:block/light_tube_full_blue", "x": 180, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "north", "east": false, "west": false, "north": false, "south": false},
+      "apply": {"model": "ultimatelights:block/light_tube_single_blue", "x": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "north", "east": true, "west": false, "north": false, "south": false},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "x": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "north", "east": false, "west": true, "north": false, "south": false},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "x": 270, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "north", "east": true, "west": true, "north": false, "south": false},
+      "apply": {"model": "ultimatelights:block/light_tube_full_blue", "x": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "south", "east": false, "west": false, "north": false, "south": false},
+      "apply": {"model": "ultimatelights:block/light_tube_single_blue", "x": 90, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "south", "east": true, "west": false, "north": false, "south": false},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "x": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "south", "east": false, "west": true, "north": false, "south": false},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "x": 90, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "south", "east": true, "west": true, "north": false, "south": false},
+      "apply": {"model": "ultimatelights:block/light_tube_full_blue", "x": 90, "y": 180}
+    },
+    {
+      "when": {"face": "wall", "facing": "east", "east": false, "west": false, "north": false, "south": false},
+      "apply": {"model": "ultimatelights:block/light_tube_single_blue", "x": 90, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "east", "east": false, "west": false, "north": true, "south": false},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "x": 270, "y": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "east", "east": false, "west": false, "north": false, "south": true},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "x": 90, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "east", "east": false, "west": false, "north": true, "south": true},
+      "apply": {"model": "ultimatelights:block/light_tube_full_blue", "x": 90, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "west", "east": false, "west": false, "north": false, "south": false},
+      "apply": {"model": "ultimatelights:block/light_tube_single_blue", "x": 90, "y": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "west", "east": false, "west": false, "north": true, "south": false},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "x": 90, "y": 270}
+    },
+    {
+      "when": {"face": "wall", "facing": "west", "east": false, "west": false, "north": false, "south": true},
+      "apply": {"model": "ultimatelights:block/light_tube_half_blue", "x": 270, "y": 90}
+    },
+    {
+      "when": {"face": "wall", "facing": "west", "east": false, "west": false, "north": true, "south": true},
+      "apply": {"model": "ultimatelights:block/light_tube_full_blue", "x": 90, "y": 270}
+    }
+  ]
+}

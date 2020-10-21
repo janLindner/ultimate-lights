@@ -1,0 +1,24 @@
+{
+  "type": "crafting_shaped",
+  "group": "light_tube",
+  "pattern": [
+    "AAA",
+    "BCA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:glass_pane"
+    },
+    "B": {
+      "item": "minecraft:iron_ingot"
+    },
+    "C": {
+      "item": "ultimatelights:diode"
+    }
+  },
+  "result": {
+    "item": "ultimatelights:light_tube",
+    "count": 1
+  }
+}

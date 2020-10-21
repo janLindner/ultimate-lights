@@ -1,0 +1,7 @@
+{
+    "parent": "ultimatelights:item/light_tube",
+    "textures": {
+        "particle": "ultimatelights:block/colors/black",
+        "light": "ultimatelights:block/colors/black"
+    }
+}
