@@ -9,6 +9,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import org.jetbrains.annotations.NotNull;
@@ -26,7 +27,15 @@ public final class LightCable extends AbstractLightBlock {
     private static final BooleanProperty WEST = BooleanProperty.create("west");
     //</editor-fold>
 
+    //<editor-fold desc="shapes">
     private static final VoxelShape SHAPE_CENTER = makeCuboidShape(5, 5, 5, 11, 11, 11);
+    private static final VoxelShape SHAPE_NORTH = makeCuboidShape(5, 5, 0, 11, 11, 6);
+    private static final VoxelShape SHAPE_WEST = makeCuboidShape(0, 5, 5, 6, 11, 11);
+    private static final VoxelShape SHAPE_DOWN = makeCuboidShape(5, 0, 5, 11, 6, 11);
+    private static final VoxelShape SHAPE_UP = makeCuboidShape(5, 11, 5, 11, 16, 11);
+    private static final VoxelShape SHAPE_EAST = makeCuboidShape(11, 5,5, 16, 11, 11);
+    private static final VoxelShape SHAPE_SOUTH = makeCuboidShape(5, 5, 11, 11, 11, 16);
+    //</editor-fold>
 
     public LightCable(@NotNull final DyeColor color) {
         super(color, HashMap::new);
@@ -64,7 +73,18 @@ public final class LightCable extends AbstractLightBlock {
         @NotNull final BlockPos pos,
         @NotNull final ISelectionContext context
     ) {
-        return SHAPE_CENTER;
+        VoxelShape shape = SHAPE_CENTER;
+
+        if (state.get(NORTH)) shape = VoxelShapes.or(shape, SHAPE_NORTH);
+        if (state.get(SOUTH)) shape = VoxelShapes.or(shape, SHAPE_SOUTH);
+
+        if (state.get(WEST)) shape = VoxelShapes.or(shape, SHAPE_WEST);
+        if (state.get(EAST)) shape = VoxelShapes.or(shape, SHAPE_EAST);
+
+        if (state.get(DOWN)) shape = VoxelShapes.or(shape, SHAPE_DOWN);
+        if (state.get(UP)) shape = VoxelShapes.or(shape, SHAPE_UP);
+
+        return shape;
     }
 
     @NotNull
