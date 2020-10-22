@@ -2,6 +2,7 @@ package me.hsgminer.ultimatelights.init;
 
 import me.hsgminer.ultimatelights.UltimateLights;
 import me.hsgminer.ultimatelights.blocks.LightBlock;
+import me.hsgminer.ultimatelights.blocks.LightCable;
 import me.hsgminer.ultimatelights.blocks.LightPanel;
 import me.hsgminer.ultimatelights.blocks.LightTube;
 import net.minecraft.block.Block;
@@ -40,6 +41,9 @@ public class BlockRegistration {
 
     public static final RegistryObject<Block> LIGHT_TUBE = register("light_tube", LightTube::new);
     public static final Map<DyeColor, RegistryObject<Block>> LIGHT_TUBES = new LinkedHashMap<>();
+
+    public static final RegistryObject<Block> LIGHT_CABLE = register("light_cable", LightCable::new);
+    public static final Map<DyeColor, RegistryObject<Block>> LIGHT_CABLES = new LinkedHashMap<>();
 
     @SubscribeEvent
     public static void onRegisterBlocks(@NotNull RegistryEvent.Register<Block> event) {

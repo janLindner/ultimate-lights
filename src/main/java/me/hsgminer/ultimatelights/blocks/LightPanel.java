@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 
 import static me.hsgminer.ultimatelights.init.BlockRegistration.LIGHT_PANELS;
 
-public class LightPanel extends AbstractHorizontalFaceLightBlock {
+public final class LightPanel extends AbstractHorizontalFaceLightBlock {
 
     //<editor-fold desc="shapes">
     private static final VoxelShape SHAPE_UP = VoxelShapes.or(

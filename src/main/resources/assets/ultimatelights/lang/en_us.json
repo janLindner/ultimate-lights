@@ -55,6 +55,8 @@
   "block.ultimatelights.light_tube_brown": "Brown Light Tube",
   "block.ultimatelights.light_tube_cyan": "Cyan Light Tube",
 
+  "block.ultimatelights.light_cable": "Light Cable",
+
   "item.ultimatelights.diode": "Diode",
 
   "ultimatelights.subtitle.light.activate": "Switch Light on",

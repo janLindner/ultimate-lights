@@ -55,6 +55,8 @@
   "block.ultimatelights.light_tube_brown": "Braune Lichtröhre",
   "block.ultimatelights.light_tube_cyan": "Türkise Lichtröhre",
 
+  "block.ultimatelights.light_cable": "Lichtkabel",
+
   "item.ultimatelights.diode": "Diode",
 
   "ultimatelights.subtitle.light.activate": "Licht angeschaltet",

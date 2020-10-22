@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 
-public class LightTube extends AbstractHorizontalFaceLightBlock {
+public final class LightTube extends AbstractHorizontalFaceLightBlock {
 
     public LightTube(
         @NotNull final DyeColor color
