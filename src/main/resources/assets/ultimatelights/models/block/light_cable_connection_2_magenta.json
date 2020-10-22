@@ -1,0 +1,7 @@
+{
+	"parent": "ultimatelights:block/light_cable_connection_2",
+	"textures": {
+		"particle": "ultimatelights:block/colors/magenta",
+		"light": "ultimatelights:block/colors/magenta"
+	}
+}

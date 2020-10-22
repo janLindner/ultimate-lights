@@ -56,6 +56,22 @@
   "block.ultimatelights.light_tube_cyan": "Türkise Lichtröhre",
 
   "block.ultimatelights.light_cable": "Lichtkabel",
+  "block.ultimatelights.light_cable_red": "Rotes Lichtkabel",
+  "block.ultimatelights.light_cable_orange": "Oranges Lichtkabel",
+  "block.ultimatelights.light_cable_yellow": "Gelbes Lichtkabel",
+  "block.ultimatelights.light_cable_gray": "Graues Lichtkabel",
+  "block.ultimatelights.light_cable_light_gray": "Hellgraues Lichtkabel",
+  "block.ultimatelights.light_cable_blue": "Blaues Lichtkabel",
+  "block.ultimatelights.light_cable_light_blue": "Hellblaues Lichtkabel",
+  "block.ultimatelights.light_cable_pink": "Pinkes Lichtkabel",
+  "block.ultimatelights.light_cable_magenta": "Magenta Lichtkabel",
+  "block.ultimatelights.light_cable_purple": "Violettes Lichtkabel",
+  "block.ultimatelights.light_cable_green": "Grünes Lichtkabel",
+  "block.ultimatelights.light_cable_lime": "Hellgrünes Lichtkabel",
+  "block.ultimatelights.light_cable_cyan": "Türkises Lichtkabel",
+  "block.ultimatelights.light_cable_black": "Schwarzes Lichtkabel",
+  "block.ultimatelights.light_cable_white": "Weißes Lichtkabel",
+  "block.ultimatelights.light_cable_brown": "Braunes Lichtkabel",
 
   "item.ultimatelights.diode": "Diode",
 

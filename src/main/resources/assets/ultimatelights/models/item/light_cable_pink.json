@@ -1,0 +1,7 @@
+{
+	"parent": "ultimatelights:item/light_cable",
+	"textures": {
+		"particle": "ultimatelights:block/colors/pink",
+		"light": "ultimatelights:block/colors/pink"
+	}
+}

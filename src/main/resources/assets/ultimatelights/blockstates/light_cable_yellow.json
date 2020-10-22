@@ -1,0 +1,31 @@
+{
+  "multipart": [
+    {
+      "apply": {"model": "ultimatelights:block/light_cable_center_yellow"}
+    },
+    {
+      "when": {"west": true},
+      "apply": {"model": "ultimatelights:block/light_cable_connection_yellow", "x": 90}
+    },
+    {
+      "when": {"east": true},
+      "apply": {"model": "ultimatelights:block/light_cable_connection_yellow", "y": 180}
+    },
+    {
+      "when": {"south": true},
+      "apply": {"model": "ultimatelights:block/light_cable_connection_yellow", "y": 270}
+    },
+    {
+      "when": {"north": true},
+      "apply": {"model": "ultimatelights:block/light_cable_connection_yellow", "x": 270, "y": 90}
+    },
+    {
+      "when": {"down": true},
+      "apply": {"model": "ultimatelights:block/light_cable_connection_2_yellow"}
+    },
+    {
+      "when": {"up": true},
+      "apply": {"model": "ultimatelights:block/light_cable_connection_3_yellow"}
+    }
+  ]
+}

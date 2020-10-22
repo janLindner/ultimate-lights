@@ -56,6 +56,22 @@
   "block.ultimatelights.light_tube_cyan": "Cyan Light Tube",
 
   "block.ultimatelights.light_cable": "Light Cable",
+  "block.ultimatelights.light_cable_red": "Red Light Cable",
+  "block.ultimatelights.light_cable_orange": "Orange Light Cable",
+  "block.ultimatelights.light_cable_yellow": "Yellow Light Cable",
+  "block.ultimatelights.light_cable_gray": "Gray Light Cable",
+  "block.ultimatelights.light_cable_light_gray": "Light Gray Light Cable",
+  "block.ultimatelights.light_cable_blue": "Blue Light Cable",
+  "block.ultimatelights.light_cable_light_blue": "Light Blue Light Cable",
+  "block.ultimatelights.light_cable_pink": "Pink Light Cable",
+  "block.ultimatelights.light_cable_magenta": "Magenta Light Cable",
+  "block.ultimatelights.light_cable_purple": "Purple Light Cable",
+  "block.ultimatelights.light_cable_green": "Green Light Cable",
+  "block.ultimatelights.light_cable_lime": "Lime Light Cable",
+  "block.ultimatelights.light_cable_cyan": "Cyan Light Cable",
+  "block.ultimatelights.light_cable_black": "Black Light Cable",
+  "block.ultimatelights.light_cable_white": "White Light Cable",
+  "block.ultimatelights.light_cable_brown": "Brown Light Cable",
 
   "item.ultimatelights.diode": "Diode",
 

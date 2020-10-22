@@ -1,6 +1,22 @@
 {
   "replace": false,
   "values": [
-    "ultimatelights:light_cable"
+    "ultimatelights:light_cable",
+    "ultimatelights:light_cable_black",
+    "ultimatelights:light_cable_white",
+    "ultimatelights:light_cable_red",
+    "ultimatelights:light_cable_orange",
+    "ultimatelights:light_cable_yellow",
+    "ultimatelights:light_cable_green",
+    "ultimatelights:light_cable_lime",
+    "ultimatelights:light_cable_blue",
+    "ultimatelights:light_cable_light_blue",
+    "ultimatelights:light_cable_gray",
+    "ultimatelights:light_cable_light_gray",
+    "ultimatelights:light_cable_brown",
+    "ultimatelights:light_cable_purple",
+    "ultimatelights:light_cable_magenta",
+    "ultimatelights:light_cable_pink",
+    "ultimatelights:light_cable_cyan"
   ]
 }

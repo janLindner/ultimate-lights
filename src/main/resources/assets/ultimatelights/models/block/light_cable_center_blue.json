@@ -1,0 +1,7 @@
+{
+	"parent": "ultimatelights:block/light_cable_center",
+	"textures": {
+		"particle": "ultimatelights:block/colors/blue",
+		"light": "ultimatelights:block/colors/blue"
+	}
+}

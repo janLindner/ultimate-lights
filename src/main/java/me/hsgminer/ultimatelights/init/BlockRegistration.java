@@ -52,6 +52,7 @@ public class BlockRegistration {
         forEachColor("light_block_", (name, color) -> LIGHT_BLOCKS.put(color, register(name, () -> new LightBlock(color))));
         forEachColor("light_panel_", (name, color) -> LIGHT_PANELS.put(color, register(name, () -> new LightPanel(color))));
         forEachColor("light_tube_", (name, color) -> LIGHT_TUBES.put(color, register(name, () -> new LightTube(color))));
+        forEachColor("light_cable_", (name, color) -> LIGHT_CABLES.put(color, register(name, () -> new LightCable(color))));
 
         ENTRIES.forEach((object, block) -> {
             registry.register(block.get());
