@@ -1,9 +1,9 @@
 {
   "type": "crafting_shaped",
-  "group": "light_tube",
+  "group": "light_cable",
   "pattern": [
     "AAA",
-    "BCA",
+    "BBB",
     "AAA"
   ],
   "key": {
@@ -11,14 +11,11 @@
       "tag": "forge:glass_panes"
     },
     "B": {
-      "item": "minecraft:iron_ingot"
-    },
-    "C": {
       "item": "ultimatelights:diode"
     }
   },
   "result": {
-    "item": "ultimatelights:light_tube",
-    "count": 1
+    "item": "ultimatelights:light_cable",
+    "count": 4
   }
 }

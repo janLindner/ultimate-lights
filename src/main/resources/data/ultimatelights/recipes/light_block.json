@@ -11,7 +11,7 @@
       "item": "minecraft:iron_ingot"
     },
     "B": {
-      "item": "minecraft:glass"
+      "tag": "forge:glass"
     },
     "C": {
       "item": "ultimatelights:diode"
